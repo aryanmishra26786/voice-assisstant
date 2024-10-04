@@ -1,0 +1,66 @@
+Voice Assistant (Votta)
+Project Overview
+Votta is an offline, personal voice assistant that can perform various system-level tasks such as opening applications, playing music, providing system health information, and more. This project does not use any external APIs, making it fully functional without an internet connection.
+
+Features
+Voice-Based Interaction: Interact with Votta using voice commands. The assistant can listen and respond to your requests.
+System Health Monitoring: Get real-time updates on CPU usage, memory usage, and battery status.
+System Information: Retrieve details about your system, including OS version, processor, machine type, etc.
+Play Music: Votta will play a random song from your Music directory.
+Open Applications: Quickly open common applications such as Notepad, Calculator, and Command Prompt.
+Lock, Shutdown, and Restart System: Lock your system or trigger shutdown and restart commands through voice.
+Time Information: Ask Votta to tell the current time.
+Wikipedia Search: Use Votta to search and summarize Wikipedia content.
+Installation
+Prerequisites
+Python 3.x
+The following Python libraries are required:
+pyttsx3 (for Text-to-Speech)
+SpeechRecognition (for Speech-to-Text)
+wikipedia (for Wikipedia search)
+psutil (for system usage monitoring)
+platform (for system information retrieval)
+Steps
+Clone the repository or download the project files.
+Install the required libraries using pip:
+bash
+Copy code
+pip install pyttsx3 SpeechRecognition wikipedia psutil
+Run the script:
+bash
+Copy code
+python voice_assistant.py
+Usage
+Upon running the script, Votta will greet you and wait for your commands.
+You can use voice commands such as:
+"Search Wikipedia for [query]" – Votta will search Wikipedia and read the summary.
+"Play music" – Votta will play a random song from your music directory.
+"Open Notepad" – Votta will open Notepad for you.
+"Tell me the time" – Votta will announce the current time.
+"Lock system", "Shutdown system", or "Restart system" – Votta will execute these system-level tasks.
+"What is the system health?" – Votta will provide CPU usage, memory usage, and battery status.
+"What is my system info?" – Votta will display information about your operating system and hardware.
+Customization
+You can modify the paths to your preferred music directory or add more common applications by editing the playMusic() and openApp() functions in the code.
+
+Voice Commands
+Here are some example commands to try:
+
+"Search Wikipedia for Python programming"
+"Play music"
+"Open Notepad"
+"What is the time?"
+"Lock system"
+"What is the system health?"
+"What is my system info?"
+"Shutdown system" (careful, this will turn off your computer!)
+Troubleshooting
+Voice not recognized: Ensure your microphone is working and that you're speaking clearly. You may need to adjust the r.pause_threshold value in the takeCommand() function.
+No audio output: Make sure your speakers or headphones are properly connected. Check if the volume is muted.
+Application paths: If Votta can't open an application, verify the paths in the openApp() function are correct for your system.
+Future Features
+Integrating file management (opening, copying, and deleting files).
+Adding more system utilities like checking network status or managing running processes.
+Expanding to support more local applications without the use of any online services.
+License
+This project is licensed under the MIT License.
